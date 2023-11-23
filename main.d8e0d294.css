@@ -72,4 +72,8 @@
     max-height: 30%;
     overflow: auto;
   }
+
+.menu:hover{
+    color: black;
+}
   
