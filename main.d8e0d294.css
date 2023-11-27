@@ -35,6 +35,7 @@
     visibility: hidden;
     opacity: 0;
   }
+
   .overlay:target {
     visibility: visible;
     opacity: 1;
@@ -76,4 +77,47 @@
 .menu:hover{
     color: black;
 }
-  
+
+.tabs {
+  list-style: none; 
+  position: relative; 
+  margin: 0;
+  padding: 0;
+  width: 100%;  
+}
+
+.tabs li {
+  display: inline-block;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  display: block;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-bottom: 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.tabs .tab-panel {  
+  display: none;
+  overflow: hidden;
+  width: 100%;  
+  position: absolute;
+  left: 0;
+}
+
+.tabs [id^="tab"]:checked + label {   
+  background-color: black;
+  color: #fff;
+}
+
+.tabs [id^="tab"]:checked ~ [id^="tab-panel"] {
+  display: block;
+}
+
+
